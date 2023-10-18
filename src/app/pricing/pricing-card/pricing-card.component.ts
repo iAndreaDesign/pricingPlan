@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PricingTeam } from '../models/pricing-team.interface';
 
 @Component({
-  selector: 'app-pricing-card',
+  selector: 'fg-pricing-card',
   templateUrl: './pricing-card.component.html',
-  styleUrls: ['./pricing-card.component.scss']
+  styleUrls: []
 })
 export class PricingCardComponent {
-
+  @Input() public pricing!: PricingTeam;
 }

@@ -1,0 +1,16 @@
+@use "sass:map";
+
+$fg-colors: (
+    fg-black: #000000,
+    fg-white: #ffff,
+    fg-gray: #525252,
+    fg-primary: #0A6AFA,
+    fg-highlight: #FF640D,
+    fg-primary-gradient: linear-gradient(180deg, #0A6AFA 0%, #0A6AFA 100%),
+    fg-gradient: linear-gradient(180deg, #BBD3EA 0%, #FF6C6C 100%)
+);
+
+$ob-tipography: (
+    font-family: "Inter"
+    fg-header: 46px 
+)

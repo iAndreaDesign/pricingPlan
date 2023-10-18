@@ -1,1 +1,11 @@
-<p>pricing-page works!</p>
+<div class="pricing-page">
+    <div class="pricing-page__container">
+        <div class="pricing-page__container__text">
+            <h3 class="fg-header"> Pricing plans for teams of all sizes</h3>
+            <p class="fg-subtitle"> Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.</p>
+        </div>
+        <div class="pricing-page__container__cards" *ngFor="let card of pricingTeam">
+            <fg-pricing-card [pricing]="card"></fg-pricing-card>
+        </div>
+    </div>
+</div>

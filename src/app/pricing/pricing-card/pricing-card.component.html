@@ -1,1 +1,18 @@
-<p>pricing-card works!</p>
+<div class="fg-card">
+    <div class="fg-card__container">
+      <div class="fg-card__container__title">
+        <h3 class="fg-header">{{ pricing.title }}</h3>
+      </div>
+      <p class="fg-subtitle">{{ pricing.subtitle }}</p>
+      <p class="fg-price"><span class="fg-price__price">{{ pricing.price }}</span><span class="fg-price__date">{{ pricing.date }}</span></p>
+      <div role="list" class="fg-card__container__list">
+        <div class="fg-card__container__list__row" *ngFor="let feature of pricing.features">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.274 7.96967C16.5359 8.26256 16.5359 8.73744 16.274 9.03033L10.0152 16.0303C9.7533 16.3232 9.32871 16.3232 9.06683 16.0303L5.49036 12.0303C5.22848 11.7374 5.22848 11.2626 5.49036 10.9697C5.75224 10.6768 6.17683 10.6768 6.43871 10.9697L9.541 14.4393L15.3257 7.96967C15.5875 7.67678 16.0121 7.67678 16.274 7.96967Z" fill="black"/>
+          </svg>
+          {{ feature }}
+        </div>
+      </div>
+    </div>
+    <a href="#" aria-describedby="tier-freelancer" class="fg-btn btn-primary">Buy plan</a>
+</div>
