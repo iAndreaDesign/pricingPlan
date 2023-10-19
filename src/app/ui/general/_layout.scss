@@ -3,6 +3,24 @@
 @import "breakpoints";
 
 $md: map.get($fg-breakpoints, md);
+$background-gradient: map.get($fg-colors, background-gradient);
+
+h1, h2, h3, h4, p {
+    margin: 8px;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    height: 100vh;
+    background: $background-gradient;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+
+    @media only screen and (max-width: $md) {
+        height: 100%;
+    }
+}
 
 .f {
     display: flex;

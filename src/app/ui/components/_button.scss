@@ -13,9 +13,11 @@ $white: map.get($fg-colors, white);
     border-radius: 20px;
     margin: 16px;
     height: fit-content;
+    cursor: pointer;
+    border: none;
 }
 
-.btn-primary {
+.primary {
     color: $white;
     background-color: $blue;
     font-family: map.get($fg-typography, secondary);
@@ -26,4 +28,9 @@ $white: map.get($fg-colors, white);
         color: $blue;
         background-color: $white;
     }
+}
+
+.highlighted {
+    color: $blue;
+    background-color: $white;
 }

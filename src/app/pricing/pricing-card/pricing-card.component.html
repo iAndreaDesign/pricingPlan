@@ -1,7 +1,10 @@
-<div class="fg-card  f column">
+<div class="fg-card f column">
     <div class="fg-card__header">
-        <div class="fg-card__container__title ">
-          <h3 class="title tc">{{ pricing.title }}</h3>
+      <div class="fg-card__header__tag" *ngIf="pricing.tag">
+        <span class="body">{{ pricing.tag}}</span>
+      </div>
+        <div class="fg-card__header__title ">
+          <p class="title tc">{{ pricing.title }}</p>
         </div>
         <p class="tc"><span class="card-price">{{ pricing.price }}</span><span class="body">{{ pricing.date }}</span></p>  
         <p class="subbody tc">{{ pricing.subtitle }}</p>
@@ -16,6 +19,6 @@
         </div>
       </div>
       <div class="fg-card__button">
-        <div class="fg-btn btn-primary" href="#">Buy plan</div>
+        <button class="fg-btn primary" href="#">Buy plan</button>
       </div>
 </div>

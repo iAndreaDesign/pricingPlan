@@ -7,6 +7,8 @@ import { PricingTeam } from '../models/pricing-team.interface';
   styleUrls: []
 })
 export class PricingPageComponent {
+  public selected: string = '2';
+
   public pricingTeam: PricingTeam[] = [
     { 
       id:         '1',
@@ -33,6 +35,10 @@ export class PricingPageComponent {
       date:       '/month',
       features:   ['Unlimited products', 'Unlimited subscribers', 'Advanced analytics', '1-hour, dedicated support response time', 'Marketing automations']
     },
-  ]
+  ];
+
+  selection(card: PricingTeam) {
+    this.selected = card.id;
+  }
 
 }

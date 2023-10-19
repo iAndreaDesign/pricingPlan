@@ -1,11 +1,11 @@
 @use "sass:map";
 @import "../general/theme";
 
+$highlight: map.get($fg-colors, highlight);
 $white: map.get($fg-colors, white);
 $gray: map.get($fg-colors, gray-light);
 $white-gradient:  map.get($fg-colors, white-gradient);
 $blue-gradient:  map.get($fg-colors, primary-gradient);
-
 
 .fg-card {
     border: 1px solid $white;
@@ -13,11 +13,30 @@ $blue-gradient:  map.get($fg-colors, primary-gradient);
     height: 100%;
     margin-right: 4px;
     margin-bottom: 32px;
+    cursor: pointer;
 
     &__header {
         background-color: $white-gradient;
         border-radius: 20px 20px 0 0;
         padding: 16px 24px;
+        position: relative;
+
+        &__tag {
+            background-color: $highlight;
+            position: absolute;
+            top: -10px;
+            right: 0;
+            left: 0;
+            left: 0;
+            margin: auto;
+            width: fit-content;
+            padding: 4px 8px;
+            border-radius: 20px;
+
+            span {
+                color: $white;
+            }
+        }
     }
 
     &__body {
@@ -37,8 +56,10 @@ $blue-gradient:  map.get($fg-colors, primary-gradient);
         display: flex;
         align-items: end;
     }
+}
 
-    &:hover {
+fg-pricing-card.selected {
+    .fg-card {
         border: none;
         background: $blue-gradient;
         transform: translateY(-40px);
@@ -57,6 +78,11 @@ $blue-gradient:  map.get($fg-colors, primary-gradient);
 
         .fg-card__header {
             background-color: unset;
+        }
+
+        &__button .fg-btn{
+            color: $blue;
+            background-color: $white;
         }
     }
 }

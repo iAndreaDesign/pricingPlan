@@ -6,7 +6,7 @@
                 <p class="body tc"> Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.</p>
             </div>
             <div class="pricing-page__container__cards f f-responsive">
-                <fg-pricing-card [pricing]="card" *ngFor="let card of pricingTeam"></fg-pricing-card>
+                <fg-pricing-card [pricing]="card" [ngClass]="{selected: card.id === selected}" *ngFor="let card of pricingTeam" (click)="selection(card)"></fg-pricing-card>
             </div>
         </div>
     </div>
