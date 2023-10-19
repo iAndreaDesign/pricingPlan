@@ -1,0 +1,18 @@
+@use "sass:map";
+
+$fg-colors: (
+    black: #191919,
+    white: #ececec,
+    gray: #525252,
+    gray-light: #D9D9D9,
+    primary: #0A6AFA,
+    highlight: #FF640D,
+    primary-gradient: linear-gradient(180deg, #0A6AFA 0%, #0A6AFA 100%),
+    white-gradient: rgba(255, 255, 255, 0.40),
+    background-gradient: linear-gradient(180deg, #BBD3EA 0%, #FF6C6C 100%)
+);
+
+$fg-typography: (
+    primary: 'Arial',
+    secondary: 'Calibri',
+);

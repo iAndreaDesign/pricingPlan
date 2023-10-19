@@ -1,0 +1,43 @@
+@use "sass:map";
+@import "theme";
+
+.f {
+    display: flex;
+}
+.row {
+    flex-direction: row;
+}
+.column {
+    flex-direction: column;
+}
+
+.tm-2 {
+    margin: 16px;
+}
+
+.ac {
+    align-items: center;
+}
+
+.tc {
+    text-align: center;
+}
+
+.mb {
+    margin-bottom: 70px;
+}
+
+.centered {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.section-gradient {
+    background-color: map.get($fg-colors, white-gradient);
+    border-radius: 30px;
+    width: 100%;
+    height: 90%;
+}

@@ -1,0 +1,29 @@
+@use "sass:map";
+@import "../general/theme";
+@import "../general/typography";
+
+$blue: map.get($fg-colors, primary);
+$white: map.get($fg-colors, white);
+
+.fg-btn {
+    width: 100%;
+    text-decoration:none;
+    text-align: center;
+    padding: 8px;
+    border-radius: 20px;
+    margin: 16px;
+    height: fit-content;
+}
+
+.btn-primary {
+    color: $white;
+    background-color: $blue;
+    font-family: map.get($fg-typography, secondary);
+    font-size: 18px;
+    font-weight: 600;
+
+    &:hover {
+        color: $blue;
+        background-color: $white;
+    }
+}

@@ -1,0 +1,47 @@
+
+.header {
+    font-family: map.get($fg-typography, primary);
+    color: map.get($fg-colors, primary);
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.title {
+    font-family: map.get($fg-typography, secondary);
+    color: map.get($fg-colors, primary);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.body {
+    font-family: map.get($fg-typography, secondary);
+    color: map.get($fg-colors, black);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.subbody {
+    font-family: map.get($fg-typography, secondary);
+    color: map.get($fg-colors, gray);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-price {
+    font-family: map.get($fg-typography, secondary);
+    color: map.get($fg-colors, black);
+    font-size: 64px;
+    font-weight: 700;
+}
+
+
+.header-highlight, 
+.title-highlight, 
+.body-highlight, 
+.card-price-highlight {
+    color: map.get($fg-colors, white);
+}
+
+.subbody-highlight {
+    color: map.get($fg-colors, gray) 80%;
+}
