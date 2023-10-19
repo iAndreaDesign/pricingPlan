@@ -1,12 +1,23 @@
 @use "sass:map";
 @import "theme";
+@import "breakpoints";
+
+$md: map.get($fg-breakpoints, md);
 
 .f {
     display: flex;
 }
+
+.f-responsive {
+    @media only screen and (max-width: $md) {
+        flex-direction: column;
+    }
+}
+
 .row {
     flex-direction: row;
 }
+
 .column {
     flex-direction: column;
 }
@@ -27,17 +38,24 @@
     margin-bottom: 70px;
 }
 
+.h100 {
+    height: 100%;
+}
+
 .centered {
     align-items: center;
     align-content: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
 }
 
 .section-gradient {
     background-color: map.get($fg-colors, white-gradient);
     border-radius: 30px;
-    width: 100%;
-    height: 90%;
+    padding: 40px;
+
+    @media only screen and (max-width: $md) {
+        padding: 16px;
+        height: 100%;
+    }
 }

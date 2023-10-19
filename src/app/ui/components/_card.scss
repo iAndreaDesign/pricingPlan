@@ -12,6 +12,7 @@ $blue-gradient:  map.get($fg-colors, primary-gradient);
     border-radius: 20px;
     height: 100%;
     margin-right: 4px;
+    margin-bottom: 32px;
 
     &__header {
         background-color: $white-gradient;
