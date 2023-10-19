@@ -1,6 +1,8 @@
 @use "sass:map";
 @import "../general/theme";
+@import "../general/breakpoints";
 
+$md: map.get($fg-breakpoints, md);
 $highlight: map.get($fg-colors, highlight);
 $white: map.get($fg-colors, white);
 $gray: map.get($fg-colors, gray-light);
@@ -62,8 +64,12 @@ fg-pricing-card.selected {
     .fg-card {
         border: none;
         background: $blue-gradient;
-        transform: translateY(-40px);
-    
+
+        @media only screen and (min-width: $md) {
+            transform: translateY(-40px);
+            transition: .5s;
+        }
+
         p, h3, span {
             color: $white;
         }

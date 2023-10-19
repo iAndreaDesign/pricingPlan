@@ -2,6 +2,7 @@
 @import "../general/theme";
 @import "../general/typography";
 
+$gray: map.get($fg-colors, gray-light);
 $blue: map.get($fg-colors, primary);
 $white: map.get($fg-colors, white);
 
@@ -15,6 +16,14 @@ $white: map.get($fg-colors, white);
     height: fit-content;
     cursor: pointer;
     border: none;
+    opacity: 1;
+    
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+    &:hover {
+        opacity: 0.6;
+    }
 }
 
 .primary {
@@ -23,14 +32,15 @@ $white: map.get($fg-colors, white);
     font-family: map.get($fg-typography, secondary);
     font-size: 18px;
     font-weight: 600;
-
-    &:hover {
-        color: $blue;
-        background-color: $white;
-    }
 }
 
 .highlighted {
     color: $blue;
     background-color: $white;
+}
+
+.disabled {
+    color: $white;
+    background-color: $gray;
+    opacity: 0.5;
 }
